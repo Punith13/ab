@@ -1,0 +1,305 @@
+/*----------------------------------*/
+/* BASIC SETUP */
+/*----------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Muli', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+.clearfix {
+    zoom: 1
+}
+
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+@font-face{
+    font-family:'Canterbury'; 
+    src:url("/vendors/fonts/Canterbury.ttf");
+    
+}
+
+
+/*----------------------------------*/
+/* RESUABLE COMPONENTS */
+/*----------------------------------*/
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/*----------------------------------*/
+/* APP COMPONENTS */
+/*----------------------------------*/
+
+header{
+    position: relative;
+    background-color: #242424;
+    height: 80px;
+}
+
+header a{
+    display: inline-block;
+    text-decoration:  none; 
+    padding: 20px; 
+    color: #E2E8EE;
+    font-weight: bold;
+    font-size: 32px;
+    padding-left: 150px; 
+    word-spacing: 2px;
+}
+
+.hire-btn{
+    position: absolute;
+    top: 20px;
+    right : 10px; 
+    background-color: #E2E8EE;
+    padding: 10px;
+    font-size: 80%;
+    border-radius: 5px;
+    outline: none;
+}
+
+/*----------------------------------*/
+/* Modal  */
+/*----------------------------------*/
+
+.modal{
+    display: none; 
+    position: fixed; 
+    padding-top: 100px; /* Location of the box */
+    top :0 ; 
+    left: 0 ; 
+    width: 100%; 
+    height: 100%; 
+    z-index: 1; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    
+}
+
+.modal-visible{
+    display: block; 
+}
+
+
+/*** W3 Reference***/ 
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+/* The Close Button */
+.close {
+    color: #E2E8EE;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #e67e22;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #242424;
+    color: #E2E8EE;
+}
+
+.modal-header h3{
+    padding: 10px;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-body .email{
+    padding: 20px 0;
+}
+
+.modal-body .mobile{
+    padding-bottom: 20px;
+}
+
+.modal-body .tots{
+    padding: 0 0 10px 0;
+    font-style: italic; 
+    color: grey;
+}
+
+.modal-body input[type=text] , input[type=email]{
+    margin: 20px 0; 
+    width : 80%; 
+    border: none;
+    outline: none; 
+    border-bottom: 1px solid black; 
+}
+
+.modal-body textarea{
+    outline: none;
+    width : 80%; 
+    height: 200px; 
+    padding-bottom: 20px;
+}
+
+.modal-body .send-btn{
+    position: absolute; 
+    right: 10px; 
+    bottom: 10px;
+    background-color: #E2E8EE;
+    padding: 10px;
+    font-size: 80%;
+    border-radius: 5px;
+}
+
+.modal-status p{
+    padding: 40px; 
+}
+
+.modal-footer {
+    position: relative;
+    padding: 2px 16px;
+    background-color: #242424;
+    height: 5px; 
+}
+
+/*----------------------------------*/
+/* Time Line */
+/*----------------------------------*/
+
+.timeline{
+    position: relative; 
+    margin: 40px 0 20px 20px; 
+    height: 100px; 
+ 
+}
+
+.timeline .timeline-pipe{
+    position: relative;
+    width : 90%;
+    height : 15px; 
+    border-radius:15px;
+    border : 1px solid #e67e22;
+}
+
+.timeline .timeline-pipe .progress-bar{
+    width : 5.5%; 
+    height: 15px;
+    border-radius: 15px;
+    background-color: #e67e22; 
+}
+
+.timeline-pipe .timeline-stop-point{
+    position: absolute; 
+    margin-top: -23px; 
+    float: left ; 
+}
+
+.timeline-stop-point.first .circle{
+    margin-left: 0px; 
+    background-color: #e67e22;
+}
+
+.timeline-stop-point .circle:hover{
+    background-color: #e67e22; 
+}
+
+.timeline .timeline-stop-point:first-of-type{
+    margin-left: 0px; 
+}
+
+.timeline-stop-point .circle{
+    border: 1px solid #e67e22; 
+    width: 35px;
+    height: 35px; 
+    border-radius: 50%;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.timeline-stop-point p{
+    width : 70%;
+}
+
+
+.map-section{
+    width : 45%; 
+    height: 500px; 
+}
+
+/***** Making Footer stick to bottom *******/ 
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 50px; /* bottom = footer height */
+}
+
+footer{ 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    clear: both; 
+    background-color: #242424;
+    height: 50px;
+}
+
+footer .social-links{
+    list-style: none;
+    margin-left: 200px; 
+    padding-top: 10px;
+}
+
+footer .social-links li{
+    width : 20px; 
+    float: left; 
+    margin-left: 5px;
+}
+
+footer .social-links li a{
+    color: #E2E8EE;
+    font-size: 120%; 
+}
+
